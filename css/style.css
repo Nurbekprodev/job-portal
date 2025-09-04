@@ -1,0 +1,175 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --primary-color: #004aad; /* Header & Footer */
+  --secondary-color: #e6f0ff; /* Hero / Highlight sections */
+  --text-color: #333333; /* Main text */
+  --light-text-color: #ffffff; /* Text on dark background */
+  --card-bg: #ffffff; /* Job card background */
+  --link-hover-color: #ff6600;
+  --btn-bg: #ff6600; /* Button background */
+  --btn-text: #ffffff; /* Button text */
+  --btn-hover: #e65c00; /* Hover background */
+}
+
+.obj-width {
+  max-width: 1200px;
+}
+
+/* HEADER START */
+header {
+  background-color: var(--primary-color);
+  width: 100vw;
+  position: fixed;
+}
+
+.container {
+  height: 80px;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+
+#navbar ul {
+  list-style: none;
+  display: flex;
+}
+
+#navbar li a {
+  color: var(--light-text-color);
+  text-decoration: none;
+  margin-right: 2rem;
+  font-size: 1.2rem;
+}
+
+#navbar li a:hover {
+  color: var(--link-hover-color);
+  transition: 0.3s;
+}
+
+#text-logo {
+  color: var(--light-text-color);
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 550px) {
+  .container {
+    height: auto;
+    flex-direction: column;
+    padding: 1rem 0;
+  }
+
+  #navbar ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
+
+/* HEADER END */
+
+/* HERO START */
+.hero {
+  background-color: var(--secondary-color);
+  height: 100vh;
+  width: 100%;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  margin-top: 0;
+}
+
+.hero-box {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  padding-top: 3rem;
+  width: 100%;
+}
+
+.h-left {
+  width: 60%;
+}
+
+.h-right {
+  width: 40%;
+}
+
+.h-right img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  display: block;
+  margin: auto;
+}
+
+.hero-form input,
+.hero-form button,
+.hero-form select {
+  height: 45px;
+  border-radius: 50px;
+  margin-top: 20px;
+}
+
+.hero-form input:hover,
+.hero-form button:hover,
+.hero-form select:hover {
+  background-color: rgb(195, 190, 190);
+  transition: 0.2s;
+}
+
+.hero-form input {
+  font-size: 1.2rem;
+  padding: 1rem;
+}
+
+.hero-form button {
+  width: 100px;
+  font-size: 1.2rem;
+  color: var(--btn-text);
+  background-color: var(--btn-bg);
+}
+
+.hero-form button:hover {
+  background-color: var(--btn-hover);
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .hero-form input,
+  .hero-form button,
+  .hero-form select {
+    display: block;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-box {
+    flex-direction: column-reverse;
+  }
+
+  .h-left {
+    width: 100%;
+  }
+
+  .h-right {
+    width: 100%;
+  }
+}
+/* HERO END */
