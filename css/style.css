@@ -1,47 +1,75 @@
+/* CSS */
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+
+/* GLOBAL BOX SIZING */
 * {
   box-sizing: border-box;
-}
-
-body {
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
+/* CSS VARIABLES */
 :root {
   --primary-color: #004aad; /* Header & Footer */
-  --secondary-color: #e6f0ff; /* Hero / Highlight sections */
-  --text-color: #333333; /* Main text */
-  --light-text-color: #ffffff; /* Text on dark background */
-  --card-bg: #ffffff; /* Job card background */
+  --secondary-color: #e6f0ff; /* Hero / Highlight */
+  --text-color: #333333;
+  --light-text-color: #ffffff;
+  --card-bg: #ffffff;
   --link-hover-color: #ff6600;
-  --btn-bg: #ff6600; /* Button background */
-  --btn-text: #ffffff; /* Button text */
-  --btn-hover: #e65c00; /* Hover background */
+
+  --btn-bg: #ff6600;
+  --btn-text: #ffffff;
+  --btn-hover: #e65c00;
+  --border-color: #ccc;
+
+  --header-height: 80px; /* default desktop header */
 }
 
+/* Max-width of the sections */
 .obj-width {
   max-width: 1200px;
 }
 
-/* HEADER START */
-header {
-  background-color: var(--primary-color);
-  width: 100vw;
-  position: fixed;
+/* BODY */
+body {
+  font-family: sans-serif;
+  padding-top: var(--header-height); /* space for fixed header */
 }
 
-.container {
-  height: 80px;
+/* HEADER */
+header {
+  position: fixed;
   top: 0;
+  width: 100%;
+  height: var(--header-height);
+  background-color: var(--primary-color);
+  z-index: 1000;
+}
+
+/* HEADER CONTAINER */
+.container {
+  height: 100%; /* fill header */
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: auto;
+  padding: 0 1rem;
 }
 
+/* LOGO */
+#text-logo {
+  color: var(--light-text-color);
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* NAVBAR */
 #navbar ul {
   list-style: none;
   display: flex;
+  margin: 0;
+  padding: 0;
 }
 
 #navbar li a {
@@ -56,16 +84,185 @@ header {
   transition: 0.3s;
 }
 
-#text-logo {
-  color: var(--light-text-color);
-  text-decoration: none;
-  font-size: 1.2rem;
+/* HERO SECTION */
+.hero {
+  background-color: var(--secondary-color);
+  min-height: calc(100vh - var(--header-height));
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
 }
 
-@media (max-width: 550px) {
+.hero-box {
+  display: flex;
+  width: 100%;
+  gap: 2rem;
+}
+
+.h-left {
+  flex: 1;
+}
+
+.h-right {
+  flex: 1;
+}
+
+.h-right img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+}
+
+/* HERO TEXT */
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  font-size: 1.3rem;
+}
+
+/* HERO FORM */
+.hero-form input,
+.hero-form select {
+  width: 70%;
+  height: 45px;
+  border-radius: 50px;
+  padding: 0 1rem;
+  margin-top: 20px;
+  font-size: 1.1rem;
+  border: 1px solid var(--border-color);
+}
+
+.hero-form button {
+  width: 100px;
+  height: 45px;
+  border-radius: 50px;
+  margin-top: 20px;
+  font-size: 1.1rem;
+  color: var(--btn-text);
+  background-color: var(--btn-bg);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.hero-form button:hover {
+  background-color: var(--btn-hover);
+}
+
+/* JOB-CARDS */
+.job-cards-container i {
+  color: var(--primary-color);
+  font-size: 50px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.featured-jobs {
+  width: 100%;
+  height: auto;
+  padding: 0;
+  margin: auto;
+}
+
+.featured-jobs-title {
+  padding: 3rem 2rem;
+  margin: 2rem auto 0;
+  text-align: center;
+}
+
+.featured-jobs-title h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.featured-jobs-title p {
+  font-size: 1.3rem;
+}
+
+.job-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: auto;
+  width: 100%;
+  background-color: white;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.job-cards-container div {
+  width: 300px;
+  height: 350px;
+  border-radius: 10px;
+  border: 2px solid var(--border-color);
+  padding: 2rem;
+  margin: 0;
+  text-align: center;
+}
+
+.job-cards-container div p {
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.apply-btn {
+  background-color: var(--btn-bg);
+  padding: 1rem 3rem;
+  border-radius: 10px;
+  color: var(--btn-text);
+}
+
+.job-cards-container a {
+  color: var(--btn-text);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.apply-btn:hover {
+  background-color: var(--btn-hover);
+  transition: 0.3s;
+}
+
+/* MEDIA QUERIES */
+
+/* Mobile adjustments */
+@media (max-width: 900px) {
+  .hero-form input,
+  .hero-form select,
+  .hero-form button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-box {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .h-left,
+  .h-right {
+    width: 100%;
+  }
+}
+
+/* MOBILE HEADER */
+@media (max-width: 600px) {
+  :root {
+    --header-height: 150px; /* taller mobile header */
+  }
+
   .container {
-    height: auto;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 1rem 0;
   }
 
@@ -75,101 +272,3 @@ header {
     gap: 0.5rem;
   }
 }
-
-/* HEADER END */
-
-/* HERO START */
-.hero {
-  background-color: var(--secondary-color);
-  height: 100vh;
-  width: 100%;
-}
-
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 0;
-}
-
-.hero p {
-  font-size: 1.3rem;
-  margin-top: 0;
-}
-
-.hero-box {
-  display: flex;
-  justify-content: center;
-  margin: auto;
-  padding-top: 3rem;
-  width: 100%;
-}
-
-.h-left {
-  width: 60%;
-}
-
-.h-right {
-  width: 40%;
-}
-
-.h-right img {
-  width: 100%;
-  max-height: 500px;
-  object-fit: cover;
-  display: block;
-  margin: auto;
-}
-
-.hero-form input,
-.hero-form button,
-.hero-form select {
-  height: 45px;
-  border-radius: 50px;
-  margin-top: 20px;
-}
-
-.hero-form input:hover,
-.hero-form button:hover,
-.hero-form select:hover {
-  background-color: rgb(195, 190, 190);
-  transition: 0.2s;
-}
-
-.hero-form input {
-  font-size: 1.2rem;
-  padding: 1rem;
-}
-
-.hero-form button {
-  width: 100px;
-  font-size: 1.2rem;
-  color: var(--btn-text);
-  background-color: var(--btn-bg);
-}
-
-.hero-form button:hover {
-  background-color: var(--btn-hover);
-  cursor: pointer;
-}
-
-@media (max-width: 900px) {
-  .hero-form input,
-  .hero-form button,
-  .hero-form select {
-    display: block;
-  }
-}
-
-@media (max-width: 600px) {
-  .hero-box {
-    flex-direction: column-reverse;
-  }
-
-  .h-left {
-    width: 100%;
-  }
-
-  .h-right {
-    width: 100%;
-  }
-}
-/* HERO END */
