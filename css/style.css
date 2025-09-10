@@ -42,6 +42,17 @@ body {
   padding-top: var(--header-height); /* space for fixed header */
 }
 
+/* HR (horizontal line) */
+
+hr {
+  height: 5px;
+  background-color: #ccc;
+  border: none;
+  width: 70vw;
+  display: block;
+  margin: auto;
+}
+
 /* HEADER */
 header {
   position: fixed;
@@ -119,6 +130,7 @@ header {
   width: 100%;
   max-height: 500px;
   object-fit: cover;
+  border-radius: 10px;
 }
 
 /* HERO TEXT */
@@ -211,6 +223,13 @@ header {
   padding: 2rem;
   margin: 0;
   text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Featured Job Cards Hover Effect */
+.job-cards-container div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
 .job-cards-container div p {
@@ -285,6 +304,13 @@ header {
   height: 250px;
   text-align: center;
   background-color: #fff;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Steps Box Hover Effect */
+.steps-box div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
 .steps-box i {
@@ -294,6 +320,75 @@ header {
 
 .steps-box h1 {
   padding: 0.5rem;
+}
+
+/* Testimonial Cards  */
+
+.testimonials-container {
+  width: 100%;
+  height: auto;
+  margin: auto;
+  padding: 3rem 0;
+}
+
+.testimonials-heading {
+  margin: auto;
+  text-align: center;
+  padding-top: 4rem;
+  font-size: 2rem;
+}
+
+.testimonials-container div.card-1 {
+  background-color: #fff2e6;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.testimonials-container div.card-2 {
+  background-color: #e6fff2;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.testimonials-container div.card-3 {
+  background-color: #f3e8ff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Card styling */
+.testimonials-container div {
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  color: #333333;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Avatar styling */
+.testimonials-container img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid #ff6600;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+/* Quote text */
+.quote {
+  color: #555555;
+  font-style: italic;
+  padding-top: 1rem;
+}
+
+/* Stars */
+.stars {
+  color: #ff6600; /* Orange stars */
+  padding-top: 0.5rem;
+}
+
+/* Card hover effect */
+.testimonials-container div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
 /* FOOTER */
@@ -356,7 +451,7 @@ header {
 }
 
 .footer-middle a:hover {
-  color: var(--link-hover);
+  text-decoration: underline;
 }
 
 .footer-middle p {
