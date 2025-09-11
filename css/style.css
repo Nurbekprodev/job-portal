@@ -391,12 +391,72 @@ header {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
+/* CTA */
+.cta {
+  width: 100%;
+  height: auto;
+  padding: 3rem;
+  background-color: var(--secondary-color);
+  /* color: var(--light-text-color) */
+}
+
+/* container */
+.cta-container {
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin: auto;
+}
+
+/* headline */
+.cta-headline {
+  padding-bottom: 2rem;
+  line-height: 2rem;
+}
+
+.cta-headline h2 {
+  font-size: 2rem;
+}
+
+.cta-headline p {
+  font-size: 1.3rem;
+}
+
+/* button */
+.cta button {
+  height: 3rem;
+  border-radius: 50px;
+  background-color: var(--btn-bg);
+  color: var(--light-text-color);
+  font-size: 1.3rem;
+}
+
+.cta button:hover {
+  background-color: var(--btn-hover);
+  transition: 0.3s;
+}
+.cta button i {
+  margin-left: 8px;
+  font-size: 0.9em;
+}
+
+button:hover i {
+  transform: translateX(5px);
+  transition: transform 0.3s;
+}
+
 /* FOOTER */
 .footer {
   width: 100%;
   height: auto;
   background-color: var(--primary-color);
   margin: 0;
+}
+
+.footer a {
+  text-decoration: none;
 }
 
 .footer-container {
