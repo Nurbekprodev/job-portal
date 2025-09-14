@@ -1,49 +1,44 @@
-/* CSS */
+/* ===========================
+   GLOBAL / SHARED STYLES
+=========================== */
+
+/* Font Awesome */
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
 
-/* GLOBAL BOX SIZING */
+/* Box sizing and reset */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* CSS VARIABLES */
+/* CSS Variables */
 :root {
-  --primary-color: #004aad; /* Header & Footer */
-  --secondary-color: #e6f0ff; /* Hero / Highlight */
+  --primary-color: #004aad;
+  --secondary-color: #e6f0ff;
   --text-color: #333333;
   --light-text-color: #ffffff;
   --card-bg: #ffffff;
   --link-hover-color: #ff6600;
-
   --btn-bg: #ff6600;
   --btn-text: #ffffff;
   --btn-hover: #e65c00;
   --border-color: #ccc;
-
   --link-hover: #d1d5db;
-
-  --header-height: 80px; /* default desktop header */
+  --header-height: 80px;
 }
 
-/* Max-width of the sections */
+/* Utility / Global classes */
 .obj-width {
   max-width: 1200px;
 }
-
 .obj-space {
   padding-top: 10rem;
 }
-
-/* BODY */
 body {
   font-family: sans-serif;
-  padding-top: var(--header-height); /* space for fixed header */
+  padding-top: var(--header-height);
 }
-
-/* HR (horizontal line) */
-
 hr {
   height: 5px;
   background-color: #ccc;
@@ -53,7 +48,9 @@ hr {
   margin: auto;
 }
 
-/* HEADER */
+/* ===========================
+   HEADER (ALL PAGES)
+=========================== */
 header {
   position: fixed;
   top: 0;
@@ -62,46 +59,115 @@ header {
   background-color: var(--primary-color);
   z-index: 1000;
 }
-
-/* HEADER CONTAINER */
 .container {
-  height: 100%; /* fill header */
+  height: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 1rem;
 }
-
-/* LOGO */
 #text-logo {
   color: var(--light-text-color);
   text-decoration: none;
   font-size: 1.5rem;
   font-weight: bold;
 }
-
-/* NAVBAR */
 #navbar ul {
   list-style: none;
   display: flex;
   margin: 0;
   padding: 0;
 }
-
 #navbar li a {
   color: var(--light-text-color);
   text-decoration: none;
   margin-right: 2rem;
   font-size: 1.2rem;
 }
-
 #navbar li a:hover {
   color: var(--link-hover-color);
   transition: 0.3s;
 }
 
-/* HERO SECTION */
+/* ===========================
+   FOOTER (ALL PAGES)
+=========================== */
+.footer {
+  width: 100%;
+  height: auto;
+  background-color: var(--primary-color);
+  margin: 0;
+}
+.footer a {
+  text-decoration: none;
+}
+.footer-container {
+  margin: auto;
+  width: 100%;
+  padding: 3rem 0;
+}
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-top h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: var(--light-text-color);
+}
+.footer-top p {
+  color: var(--light-text-color);
+}
+.footer-top i {
+  color: var(--light-text-color);
+  padding-left: 1rem;
+  font-size: 1.5rem;
+}
+.footer-top i:hover {
+  color: var(--btn-hover);
+  transition: 0.3s;
+}
+.footer-icons {
+  display: flex;
+}
+.footer-middle {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.footer-middle a {
+  display: block;
+  color: var(--light-text-color);
+  text-decoration: none;
+  line-height: 1.5rem;
+}
+.footer-middle a:hover {
+  text-decoration: underline;
+}
+.footer-middle p {
+  display: block;
+  color: var(--light-text-color);
+  padding-bottom: 0.7rem;
+}
+.footer-middle div {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+.footer-bottom {
+  text-align: center;
+  padding-top: 3rem;
+  color: var(--light-text-color);
+}
+
+/* ===========================
+   HOMEPAGE
+=========================== */
+
+/* --- Hero Section --- */
 .hero {
   background-color: var(--secondary-color);
   min-height: calc(100vh - var(--header-height));
@@ -111,39 +177,30 @@ header {
   justify-content: center;
   padding: 2rem;
 }
-
 .hero-box {
   display: flex;
   width: 100%;
   gap: 2rem;
 }
-
 .h-left {
   flex: 1;
 }
-
 .h-right {
   flex: 1;
 }
-
 .h-right img {
   width: 100%;
   max-height: 500px;
   object-fit: cover;
   border-radius: 10px;
 }
-
-/* HERO TEXT */
 .hero h1 {
   font-size: 3rem;
   margin-bottom: 0.5rem;
 }
-
 .hero p {
   font-size: 1.3rem;
 }
-
-/* HERO FORM */
 .hero-form input,
 .hero-form select {
   width: 70%;
@@ -152,9 +209,11 @@ header {
   padding: 0 1rem;
   margin-top: 20px;
   font-size: 1.1rem;
-  border: 1px solid var(--border-color);
-}
+  /* border: 1px solid var(--border-color); */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),
+            0 6px 20px rgba(0, 0, 0, 0.08);
 
+}
 .hero-form button {
   width: 100px;
   height: 45px;
@@ -163,46 +222,36 @@ header {
   font-size: 1.1rem;
   color: var(--btn-text);
   background-color: var(--btn-bg);
-  border: none;
+  /* border: none; */
   cursor: pointer;
   transition: background-color 0.3s;
-}
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),
+            0 6px 20px rgba(0, 0, 0, 0.08);
 
+}
 .hero-form button:hover {
   background-color: var(--btn-hover);
 }
 
-/* JOB-CARDS */
-.job-cards-container i {
-  color: var(--primary-color);
-  font-size: 50px;
-  width: 100%;
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
+/* --- Featured Jobs --- */
 .featured-jobs {
   width: 100%;
   height: auto;
   padding: 0;
   margin: auto;
 }
-
 .featured-jobs-title {
   padding: 3rem 2rem;
   margin: 2rem auto 0;
   text-align: center;
 }
-
 .featured-jobs-title h2 {
   font-size: 3rem;
   font-weight: bold;
 }
-
 .featured-jobs-title p {
   font-size: 1.3rem;
 }
-
 .job-cards-container {
   display: flex;
   flex-wrap: wrap;
@@ -214,7 +263,6 @@ header {
   align-items: center;
   justify-content: center;
 }
-
 .job-cards-container div {
   width: 300px;
   height: 350px;
@@ -225,41 +273,41 @@ header {
   text-align: center;
   transition: transform 0.3s, box-shadow 0.3s;
 }
-
-/* Featured Job Cards Hover Effect */
 .job-cards-container div:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
-
+.job-cards-container i {
+  color: var(--primary-color);
+  font-size: 50px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 2rem;
+}
 .job-cards-container div p {
   padding: 1rem;
   margin-bottom: 2rem;
 }
-
 .apply-btn {
   background-color: var(--btn-bg);
   padding: 1rem 3rem;
   border-radius: 10px;
   color: var(--btn-text);
 }
-
 .job-cards-container a {
   color: var(--btn-text);
   text-decoration: none;
   font-weight: bold;
 }
-
 .apply-btn:hover {
   background-color: var(--btn-hover);
   transition: 0.3s;
 }
-
 .job-cards-container span {
   color: grey;
 }
 
-/* HOW IT WORKS SECTION */
+/* --- How It Works Section --- */
 .how-it-works {
   width: 100%;
   height: auto;
@@ -267,27 +315,22 @@ header {
   padding: 0;
   background-color: var(--secondary-color);
 }
-
 .how-it-works-container {
   padding: 3rem;
   margin: auto;
 }
-
 .how-it-works-title {
   text-align: center;
   margin-top: 1rem;
   margin-bottom: 3rem;
 }
-
 .how-it-works-title h2 {
   font-size: 3rem;
   font-weight: bold;
 }
-
 .how-it-works-title p {
   font-size: 1.3rem;
 }
-
 .steps-box {
   display: grid;
   grid-template-columns: repeat(3, 200px);
@@ -295,7 +338,6 @@ header {
   align-items: center;
   gap: 3rem;
 }
-
 .steps-box div {
   border: 1px solid var(--border-color);
   border-radius: 10px;
@@ -306,63 +348,52 @@ header {
   background-color: #fff;
   transition: transform 0.3s, box-shadow 0.3s;
 }
-
-/* Steps Box Hover Effect */
 .steps-box div:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
-
 .steps-box i {
   font-size: 2.5rem;
   padding-bottom: 1rem;
 }
-
 .steps-box h1 {
   padding: 0.5rem;
 }
 
-/* Testimonial Cards  */
-
-.testimonials-container {
+/* --- Testimonials --- */
+.testimonials {
   width: 100%;
   height: auto;
-  margin: auto;
-  padding: 3rem 0;
+  background-color: var(--secondary-color);
 }
-
 .testimonials-heading {
   margin: auto;
   text-align: center;
   padding-top: 4rem;
   font-size: 2rem;
 }
-
-.testimonials-container div.card-1 {
-  background-color: #fff2e6;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.testimonials-container {
+  width: 100%;
+  height: auto;
+  margin: auto;
+  padding: 3rem 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
-
-.testimonials-container div.card-2 {
-  background-color: #e6fff2;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.testimonials-container div.card-3 {
-  background-color: #f3e8ff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Card styling */
 .testimonials-container div {
   border-radius: 10px;
   padding: 2rem;
   text-align: center;
   color: #333333;
   transition: transform 0.3s, box-shadow 0.3s;
+  width: 100%;
 }
-
-/* Avatar styling */
+.testimonials-container div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
 .testimonials-container img {
   width: 100px;
   height: 100px;
@@ -371,36 +402,35 @@ header {
   object-fit: cover;
   margin-bottom: 1rem;
 }
-
-/* Quote text */
 .quote {
   color: #555555;
   font-style: italic;
   padding-top: 1rem;
 }
-
-/* Stars */
 .stars {
-  color: #ff6600; /* Orange stars */
+  color: #ff6600;
   padding-top: 0.5rem;
 }
-
-/* Card hover effect */
-.testimonials-container div:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+.testimonials-container div.card-1 {
+  background-color: #fff2e6;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.testimonials-container div.card-2 {
+  background-color: #e6fff2;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.testimonials-container div.card-3 {
+  background-color: #f3e8ff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* CTA */
+/* --- CTA --- */
 .cta {
   width: 100%;
   height: auto;
   padding: 3rem;
   background-color: var(--secondary-color);
-  /* color: var(--light-text-color) */
 }
-
-/* container */
 .cta-container {
   width: 100%;
   display: grid;
@@ -409,22 +439,16 @@ header {
   align-items: center;
   margin: auto;
 }
-
-/* headline */
 .cta-headline {
   padding-bottom: 2rem;
   line-height: 2rem;
 }
-
 .cta-headline h2 {
   font-size: 2rem;
 }
-
 .cta-headline p {
   font-size: 1.3rem;
 }
-
-/* button */
 .cta button {
   height: 3rem;
   border-radius: 50px;
@@ -432,7 +456,6 @@ header {
   color: var(--light-text-color);
   font-size: 1.3rem;
 }
-
 .cta button:hover {
   background-color: var(--btn-hover);
   transition: 0.3s;
@@ -441,100 +464,96 @@ header {
   margin-left: 8px;
   font-size: 0.9em;
 }
-
 button:hover i {
   transform: translateX(5px);
   transition: transform 0.3s;
 }
 
-/* FOOTER */
-.footer {
+
+/* ===========================
+   JOB-LISTING
+=========================== */
+  /* search-bar */
+.search-bar-section {
   width: 100%;
   height: auto;
-  background-color: var(--primary-color);
-  margin: 0;
+  background-color: var(--secondary-color);
+  padding: 3rem;
 }
 
-.footer a {
-  text-decoration: none;
-}
-
-.footer-container {
+.search-bar {
+  padding: 3rem;
   margin: auto;
-  width: 100%;
-  padding: 3rem 0;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px  #ccc;
 }
 
-.footer-top {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
+.search-bar:hover{
+    transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transition: 0.5s;
 }
 
-.footer-top h1 {
-  font-size: 3.5rem;
-  font-weight: bold;
-  color: var(--light-text-color);
+.search-bar-title h2 {
+  font-size: 3rem;
 }
 
-.footer-top p {
-  color: var(--light-text-color);
+.search-bar-title p {
+  font-size: 1.3rem;
 }
 
-.footer-top i {
-  color: var(--light-text-color);
-  padding-left: 1rem;
-  font-size: 1.5rem;
-}
-
-.footer-top i:hover {
-  color: var(--btn-hover);
-  transition: 0.3s;
-}
-
-.footer-icons {
-  display: flex;
-}
-
-.footer-middle {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.footer-middle a {
-  display: block;
-  color: var(--light-text-color);
-  text-decoration: none;
-  line-height: 1.5rem;
-}
-
-.footer-middle a:hover {
-  text-decoration: underline;
-}
-
-.footer-middle p {
-  display: block;
-  color: var(--light-text-color);
-  padding-bottom: 0.7rem;
-}
-
-.footer-middle div {
+.search form {
   padding-top: 2rem;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr 1fr;
+  grid-template-areas: "keyword location job-type search-btn";
+  gap: 1rem;
 }
 
-.footer-bottom {
-  text-align: center;
-  padding-top: 3rem;
-  color: var(--light-text-color);
+#keyword {
+  grid-area: keyword;
 }
 
-/* MEDIA QUERIES */
+#location {
+  grid-area: location;
+}
 
-/* Mobile adjustments */
+#job-type {
+  grid-area: job-type;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),
+            0 6px 20px rgba(0, 0, 0, 0.08);
+
+  border-radius: 50px;
+  padding: 1rem;
+}
+
+#search-btn {
+  grid-area: search-btn;
+  width: 100%;
+  background-color: var(--btn-bg);
+  color: var(--light-text-color)
+}
+
+#search-btn:hover {
+  background-color: var(--btn-hover);
+}
+
+#keyword,
+#location,
+#search-btn {
+  height: 3.5rem;
+  padding: 1rem;
+  font-size: 1.3rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),
+            0 6px 20px rgba(0, 0, 0, 0.08);
+
+  border-radius: 50px;
+}
+
+/* ===========================
+   MEDIA QUERIES
+=========================== */
 @media (max-width: 900px) {
   .hero-form input,
   .hero-form select,
@@ -542,57 +561,70 @@ button:hover i {
     width: 100%;
   }
 }
-
 @media (max-width: 600px) {
   .hero-box {
     flex-direction: column-reverse;
     align-items: center;
   }
-
   .h-left,
   .h-right {
     width: 100%;
   }
-}
-
-/* MOBILE HEADER */
-@media (max-width: 600px) {
   :root {
-    --header-height: 150px; /* taller mobile header */
+    --header-height: 150px;
   }
-
   .container {
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 1rem 0;
   }
-
   #navbar ul {
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
   }
 }
-
 @media (max-width: 710px) {
   .steps-box {
     grid-template-columns: 200px;
     gap: 3rem;
   }
-
   .footer-top {
     display: block;
     margin: 0;
   }
-
   .footer-top i {
     padding-top: 1rem;
   }
 }
-
 @media (max-width: 1200px) {
   .obj-width {
     width: 95%;
+  }
+}
+
+@media (max-width: 1240px) {
+  .search form {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "keyword keyword"
+      "location job-type"
+      "search-btn search-btn";
+  }
+}
+
+@media (max-width: 800px) {
+  .search form {
+    display: flex;
+    flex-direction: column;
+   
+  }
+
+  #keyword,
+#location,
+#search-btn, 
+#job-type{
+    min-width: 150px;
   }
 }
