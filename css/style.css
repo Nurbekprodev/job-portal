@@ -210,9 +210,7 @@ header {
   margin-top: 20px;
   font-size: 1.1rem;
   /* border: 1px solid var(--border-color); */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),
-            0 6px 20px rgba(0, 0, 0, 0.08);
-
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.08);
 }
 .hero-form button {
   width: 100px;
@@ -225,9 +223,7 @@ header {
   /* border: none; */
   cursor: pointer;
   transition: background-color 0.3s;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),
-            0 6px 20px rgba(0, 0, 0, 0.08);
-
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.08);
 }
 .hero-form button:hover {
   background-color: var(--btn-hover);
@@ -469,11 +465,10 @@ button:hover i {
   transition: transform 0.3s;
 }
 
-
 /* ===========================
    JOB-LISTING
 =========================== */
-  /* search-bar */
+/* search-bar */
 .search-bar-section {
   width: 100%;
   height: auto;
@@ -486,11 +481,11 @@ button:hover i {
   margin: auto;
   background-color: white;
   border-radius: 10px;
-  box-shadow: 1px 1px 5px  #ccc;
+  box-shadow: 1px 1px 5px #ccc;
 }
 
-.search-bar:hover{
-    transform: translateY(-5px);
+.search-bar:hover {
+  transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
   transition: 0.5s;
 }
@@ -521,8 +516,7 @@ button:hover i {
 
 #job-type {
   grid-area: job-type;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),
-            0 6px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.08);
 
   border-radius: 50px;
   padding: 1rem;
@@ -532,7 +526,7 @@ button:hover i {
   grid-area: search-btn;
   width: 100%;
   background-color: var(--btn-bg);
-  color: var(--light-text-color)
+  color: var(--light-text-color);
 }
 
 #search-btn:hover {
@@ -545,13 +539,140 @@ button:hover i {
   height: 3.5rem;
   padding: 1rem;
   font-size: 1.3rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),
-            0 6px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.08);
 
   border-radius: 50px;
 }
 
-/* ===========================
+/* job-cards section */
+.job-cards-section {
+  width: 100%;
+  padding: 0;
+}
+
+.cards-container {
+  width: 100%;
+  height: auto;
+  padding: 3rem 1rem;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.card {
+  width: 350px;
+  height: 500px;
+  padding: 2rem;
+  border: 1px solid var(--border-color);
+  /* text-align: center; */
+  line-height: 1.8rem;
+  border-radius: 10px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transition: 0.3s;
+}
+
+.job-card-1 {
+  background-color: rgb(252, 202, 209);
+}
+
+.job-card-2 {
+  background-color: rgb(203, 202, 252);
+}
+
+.job-card-3 {
+  background-color: rgb(202, 252, 211);
+}
+
+.job-card-4 {
+  background-color: rgb(203, 201, 202);
+}
+
+.job-card-5 {
+  background-color: rgb(194, 211, 144);
+}
+
+.job-card-6 {
+  background-color: rgb(170, 169, 196);
+}
+
+.cards-container i {
+  font-size: 30px;
+}
+
+
+
+.card-icons {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+}
+
+.details-btn,
+.apply-now-btn {
+  width: 135px;
+  padding: 1rem;
+  display: block;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.details-btn {
+  background-color: transparent;
+  border-width: 3px;
+}
+
+.apply-now-btn {
+  background-color: black;
+  color: var(--light-text-color);
+}
+
+.card-buttons {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+/* pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.pagination a {
+  color: var(--primary-color);
+  padding: 0.6rem 1rem;
+  text-decoration: none;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.pagination a:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.pagination a.active {
+  background-color: var(--primary-color);
+  color: #fff;
+} /* ===========================
    MEDIA QUERIES
 =========================== */
 @media (max-width: 900px) {
@@ -618,13 +739,66 @@ button:hover i {
   .search form {
     display: flex;
     flex-direction: column;
-   
   }
 
   #keyword,
-#location,
-#search-btn, 
-#job-type{
+  #location,
+  #search-btn,
+  #job-type {
     min-width: 150px;
+  }
+}
+
+@media (max-width: 1170px) {
+  .cards-container {
+    padding: 3rem 2rem;
+    gap: 2rem;
+    max-width: 900px;
+  }
+}
+
+@media (max-width: 450px) {
+  .card {
+    width: auto;
+    height: auto;
+    padding: 2rem;
+    line-height: 1.5rem;
+  }
+
+  .cards-container {
+    padding: 0.5rem;
+  }
+
+  .search-bar-section {
+    padding: 1rem 0px 2rem;
+  }
+}
+
+/* pagination */
+@media (max-width: 768px) {
+  .pagination {
+    gap: 0.3rem;
+  }
+
+  .pagination a {
+    padding: 0.4rem 0.7rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .pagination {
+    flex-wrap: wrap; /* numbers stack nicely */
+    justify-content: center;
+  }
+
+  .pagination a {
+    padding: 0.3rem 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .pagination a.prev,
+  .pagination a.next {
+    display: none; /* hide Prev/Next on very small screens */
   }
 }
