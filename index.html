@@ -14,15 +14,30 @@
   <body>
     <!-- HEADER section -->
     <header>
-      <div class="container obj-width">
-        <a href="index.html" id="text-logo"><h1>JobPortal</h1></a>
+      <div class="container">
+        <!-- Logo -->
+        <a href="index.html" id="text-logo">JobPortal</a>
+
+        <!-- Navigation -->
         <nav id="navbar">
-          <ul>
+          <ul id="nav-links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="job_listing.html">Jobs</a></li>
-            <li><a href="#">Login/Register</a></li>
+            <li><a href="job_listing.html">Job List</a></li>
+            <li><a href="job-details.html">Job Details</a></li>
           </ul>
+
+          <!-- Hamburger -->
+          <div id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </nav>
+
+        <!-- Login/Register -->
+        <div id="login-register">
+          <a href="#">Login/Register</a>
+        </div>
       </div>
     </header>
 
@@ -195,7 +210,7 @@
         <div class="footer-top">
           <div>
             <a href="index.html"><h1>JobPortal</h1></a>
-            <p>Find the right opportunity, anytime</p> 
+            <p>Find the right opportunity, anytime</p>
           </div>
           <div class="footer-icons">
             <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -231,5 +246,6 @@
         </div>
       </div>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>
