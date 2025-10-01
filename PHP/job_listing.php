@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -13,33 +13,7 @@
   </head>
   <body>
     <!-- HEADER section -->
-    <header>
-      <div class="container">
-        <!-- Logo -->
-        <a href="index.html" id="text-logo">JobPortal</a>
-
-        <!-- Navigation -->
-        <nav id="navbar">
-          <ul id="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="job_listing.html">Job List</a></li>
-            <li><a href="job-details.html">Job Details</a></li>
-          </ul>
-
-          <!-- Hamburger -->
-          <div id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </nav>
-
-        <!-- Login/Register -->
-        <div id="login-register">
-          <a href="#">Login/Register</a>
-        </div>
-      </div>
-    </header>
+    <?php include '../includes/header.php'; ?>
 
     <!-- SEARCH BAR section -->
     <section class="search-bar-section">
@@ -244,47 +218,7 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="footer">
-      <div class="footer-container obj-width">
-        <div class="footer-top">
-          <div>
-            <a href="index.html"><h1>JobPortal</h1></a>
-            <p>Find the right opportunity, anytime</p>
-          </div>
-          <div class="footer-icons">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i> </a>
-            <a href="#"><i class="fab fa-linkedin-in"></i> </a>
-            <a href="#"><i class="fab fa-twitter"></i> </a>
-            <a href="#"><i class="fab fa-youtube"></i> </a>
-          </div>
-        </div>
-
-        <div class="footer-middle">
-          <div>
-            <p>For Students</p>
-            <a href="#">Job Listings</a>
-            <a href="#">Saved Jobs</a>
-            <a href="#">Applied Jobs</a>
-          </div>
-          <div>
-            <p>For Employers</p>
-            <a href="#">Post a Job</a>
-            <a href="#">Manage Jobs</a>
-            <a href="#">View Applicants</a>
-          </div>
-          <div>
-            <p>About & Legal</p>
-            <a href="#">About Us</a>
-            <a href="#">Contact</a>
-            <a href="#">Terms & Privacy</a>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <p>© 2025 Job Portal Korea. All rights reserved.</p>
-        </div>
-      </div>
-    </footer>
-    <script src="js/script.js"></script>
+   <?php include '../includes/footer.php'; ?>
+    <script src="../js/script.js"></script>
   </body>
 </html>

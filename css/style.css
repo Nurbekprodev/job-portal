@@ -19,6 +19,7 @@
   --secondary-color: #e6f0ff;
   --text-color: #333333;
   --light-text-color: #ffffff;
+  --secondary-text-color: #7e8890;
   --card-bg: #ffffff;
   --link-hover-color: #ff6600;
   --btn-bg: #ff6600;
@@ -53,6 +54,10 @@ hr {
 /* ===========================
    HEADER (ALL PAGES)
 =========================== */
+/* ===========================
+   HEADER (ALL PAGES)
+=========================== */
+
 /* Header */
 header {
   position: fixed;
@@ -80,16 +85,23 @@ header {
   font-weight: bold;
 }
 
+/* Navigation Links */
 #nav-links {
   display: flex;
   gap: 1.5rem;
   list-style: none;
+  align-items: center;
+}
+
+#nav-links li {
+  position: relative;
 }
 
 #nav-links li a {
   color: #fff;
   text-decoration: none;
   font-size: 1.2rem;
+  padding: 0.5rem;
 }
 
 #nav-links li a:hover {
@@ -97,10 +109,42 @@ header {
   transition: 0.3s;
 }
 
+/* Dropdown Menu */
+#nav-links li ul.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #004aad;
+  padding: 0.5rem 0;
+  list-style: none;
+  min-width: 200px;
+  z-index: 1001;
+  border-radius: 0 0 5px 5px;
+}
+
+#nav-links li:hover ul.dropdown {
+  display: block;
+}
+
+#nav-links li ul.dropdown li {
+  padding: 0;
+}
+
+#nav-links li ul.dropdown li a {
+  display: block;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
+
+#nav-links li ul.dropdown li a:hover {
+  background-color: #003080;
+}
+
 /* Login/Register */
 #login-register a {
   color: #fff;
-  background-color: var(--btn-bg);
+  background-color: var(--btn-bg, #0066cc);
   padding: 8px 15px;
   border-radius: 5px;
   text-decoration: none;
@@ -109,7 +153,7 @@ header {
 }
 
 #login-register a:hover {
-  background-color: var(--btn-hover);
+  background-color: var(--btn-hover, #0055aa);
 }
 
 /* Hamburger */
@@ -143,7 +187,7 @@ header {
 }
 
 /* Mobile Menu */
-@media (max-width: 768px) {
+@media (max-width: 850px) {
   #nav-links {
     display: none;
     flex-direction: column;
@@ -163,8 +207,18 @@ header {
     text-align: center;
   }
 
+  #nav-links li ul.dropdown {
+    position: static;
+  }
+
+  #nav-links li a {
+    padding: 1rem;
+  }
+
   #login-register {
     order: 2;
+    text-align: center;
+    margin-bottom: 1rem;
   }
 
   #hamburger {
@@ -570,7 +624,7 @@ button:hover i {
   width: 100%;
   height: auto;
   background-color: var(--secondary-color);
-  padding: 3rem;
+  padding: 3rem 0;
 }
 
 .search-bar {
@@ -991,15 +1045,148 @@ button:hover i {
 }
 
 /* ===========================
+    CONTACT
+=========================== */
+.contact-section {
+  width: 100%;
+  height: auto;
+  padding: 3rem 0;
+}
+
+.contact-container {
+  margin: auto;
+  display: grid;
+  grid-template-columns: 60% 1fr;
+  grid-template-rows: 1fr;
+  gap: 3rem;
+  padding: 3rem;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 8px 500px rgba(0, 0, 0, 0.5); /* shadow effect */
+}
+
+.student-form {
+  margin: auto;
+  width: 100%;
+}
+
+.student-form form {
+  display: grid;
+  grid-template-areas:
+    "name subject"
+    "email phone-number"
+    "message message"
+    "submit submit";
+  gap: 1rem;
+}
+
+.student-form input,
+.student-form button {
+  height: 3.5rem;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+}
+
+#name {
+  grid-area: name;
+}
+
+#subject {
+  grid-area: subject;
+}
+
+#email {
+  grid-area: email;
+}
+
+#phone-number {
+  grid-area: phone-number;
+}
+
+#message {
+  grid-area: message;
+  height: 10rem;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+}
+
+#submit {
+  grid-area: submit;
+  width: 200px;
+  background-color: var(--primary-color);
+  color: var(--light-text-color);
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+#submit:hover {
+  background-color: var(--primary-color-hover);
+}
+
+.contact-info {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.contact-info-header p,
+.contacts-text  {
+  color: var(--secondary-text-color);
+}
+.contacts {
+  display: grid;
+}
+
+.contacts p {
+  display: flex;
+  align-items: flex-start; /* keeps icon aligned at the top */
+  margin-bottom: 10px; /* spacing between rows */
+}
+
+.contacts i {
+  font-size: 1.3rem;
+  line-height: 1.1rem;
+  color: var(--primary-color);
+  margin-right: 1rem;
+  padding: 0.5rem 0;
+}
+
+.contacts p{
+  display: flex;
+  align-items: center;
+}
+
+.quick-links h2 {
+  padding-bottom: 20px;
+}
+
+.quick-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin: 0 8px 8px 0;
+  border-radius: 6px;
+  background: #f0f0f0;
+  color: #555;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.quick-links a:hover {
+  background: var(--primary-color);
+  color: var(--light-text-color);
+}
+
+/* ===========================
    MEDIA QUERIES
 =========================== */
-@media (max-width: 900px) {
-  .hero-form input,
-  .hero-form select,
-  .hero-form button {
-    width: 100%;
-  }
-}
+
 @media (max-width: 900px) {
   .hero-box {
     flex-direction: column-reverse;
@@ -1008,6 +1195,27 @@ button:hover i {
   .h-left,
   .h-right {
     width: 100%;
+  }
+  .hero-form input,
+  .hero-form select,
+  .hero-form button {
+    width: 100%;
+  }
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+  .student-form form {
+    display: grid;
+    grid-template-areas:
+      "name"
+      "subject"
+      "email"
+      "phone-number"
+      "message"
+      "message"
+      "submit" 
+      "submit";
+    gap: 1rem;
   }
 }
 @media (max-width: 710px) {
