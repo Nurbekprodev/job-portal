@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -13,18 +13,7 @@
   </head>
   <body>
     <!-- HEADER section -->
-    <header>
-      <div class="container obj-width">
-        <a href="index.html" id="text-logo"><h1>JobPortal</h1></a>
-        <nav id="navbar">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="job_listing.html">Jobs</a></li>
-            <li><a href="#">Login/Register</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    <?php include '../includes/header.php'; ?>
 
     <!-- SEARCH BAR section -->
     <section class="search-bar-section">
@@ -59,27 +48,27 @@
 
     <!-- JOB CARDS section -->
     <section class="job-cards-section">
-      <div class="cards-container obj-width">
+      <div class="cards-container">
         <!-- card-1 -->
-        <div class="job-card-1 card">
+        <div class="card job-card-1">
           <div class="card-icons">
             <i class="fas fa-headset"></i>
             <i class="far fa-bookmark"></i>
           </div>
-
-          <div>
+          <div class="card-content">
             <h2>Customer Support Agent</h2>
             <h3>HelpDesk Pro</h3>
-            <p>Part-Time | Entry-Level</p>
-            <br />
+            <div class="job-tags">
+              <span>Busan</span>
+              <span>Part-Time</span>
+              <span>₩11k/hr</span>
+            </div>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
               deserunt hic doloremque, pariatur labore perferendis veritatis
-              voluptates totam beatae consequatur ullam modi porro quis
-              laudantium et nam iusto, quia suscipit.
+              voluptates totam.
             </p>
           </div>
-
           <div class="card-buttons">
             <button class="details-btn">Details</button>
             <button class="apply-now-btn">Apply Now</button>
@@ -87,25 +76,25 @@
         </div>
 
         <!-- card-2 -->
-        <div class="job-card-2 card">
+        <div class="card job-card-2">
           <div class="card-icons">
             <i class="fas fa-truck"></i>
             <i class="far fa-bookmark"></i>
           </div>
-
-          <div>
+          <div class="card-content">
             <h2>Delivery Driver</h2>
             <h3>QuickDrop Logistics</h3>
-            <p>Part-Time | Entry-Level</p>
-            <br />
+            <div class="job-tags">
+              <span>Busan</span>
+              <span>Part-Time</span>
+              <span>Entry-Level</span>
+            </div>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
               deserunt hic doloremque, pariatur labore perferendis veritatis
-              voluptates totam beatae consequatur ullam modi porro quis
-              laudantium et nam iusto, quia suscipit.
+              voluptates totam.
             </p>
           </div>
-
           <div class="card-buttons">
             <button class="details-btn">Details</button>
             <button class="apply-now-btn">Apply Now</button>
@@ -113,25 +102,25 @@
         </div>
 
         <!-- card-3 -->
-        <div class="job-card-3 card">
+        <div class="card job-card-3">
           <div class="card-icons">
             <i class="fas fa-store"></i>
             <i class="far fa-bookmark"></i>
           </div>
-
-          <div>
+          <div class="card-content">
             <h2>Retail Sales Associate</h2>
             <h3>CityMart</h3>
-            <p>Part-Time | Entry-Level</p>
-            <br />
+            <div class="job-tags">
+              <span>Busan</span>
+              <span>Part-Time</span>
+              <span>Entry-Level</span>
+            </div>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
               deserunt hic doloremque, pariatur labore perferendis veritatis
-              voluptates totam beatae consequatur ullam modi porro quis
-              laudantium et nam iusto, quia suscipit.
+              voluptates totam.
             </p>
           </div>
-
           <div class="card-buttons">
             <button class="details-btn">Details</button>
             <button class="apply-now-btn">Apply Now</button>
@@ -139,25 +128,25 @@
         </div>
 
         <!-- card-4 -->
-        <div class="job-card-4 card">
+        <div class="card job-card-4">
           <div class="card-icons">
             <i class="fas fa-book-open"></i>
             <i class="far fa-bookmark"></i>
           </div>
-
-          <div>
+          <div class="card-content">
             <h2>Tutor (English)</h2>
             <h3>EduPlus Academy</h3>
-            <p>Part-Time | Entry-Level</p>
-            <br />
+            <div class="job-tags">
+              <span>Busan</span>
+              <span>Part-Time</span>
+              <span>Entry-Level</span>
+            </div>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
               deserunt hic doloremque, pariatur labore perferendis veritatis
-              voluptates totam beatae consequatur ullam modi porro quis
-              laudantium et nam iusto, quia suscipit.
+              voluptates totam.
             </p>
           </div>
-
           <div class="card-buttons">
             <button class="details-btn">Details</button>
             <button class="apply-now-btn">Apply Now</button>
@@ -165,25 +154,25 @@
         </div>
 
         <!-- card-5 -->
-        <div class="job-card-5 card">
+        <div class="card job-card-5">
           <div class="card-icons">
             <i class="fas fa-hashtag"></i>
             <i class="far fa-bookmark"></i>
           </div>
-
-          <div>
+          <div class="card-content">
             <h2>Social Media Assistant</h2>
             <h3>TrendBuzz</h3>
-            <p>Part-Time | Junior</p>
-            <br />
+            <div class="job-tags">
+              <span>Busan</span>
+              <span>Part-Time</span>
+              <span>Junior</span>
+            </div>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
               deserunt hic doloremque, pariatur labore perferendis veritatis
-              voluptates totam beatae consequatur ullam modi porro quis
-              laudantium et nam iusto, quia suscipit.
+              voluptates totam.
             </p>
           </div>
-
           <div class="card-buttons">
             <button class="details-btn">Details</button>
             <button class="apply-now-btn">Apply Now</button>
@@ -191,31 +180,32 @@
         </div>
 
         <!-- card-6 -->
-        <div class="job-card-6 card">
+        <div class="card job-card-6">
           <div class="card-icons">
-            <i class="fa fa-utensils"></i>
+            <i class="fas fa-utensils"></i>
             <i class="far fa-bookmark"></i>
           </div>
-
-          <div>
+          <div class="card-content">
             <h2>Kitchen Assistant</h2>
             <h3>Moshi</h3>
-            <p>Part-Time | Entry-Level</p>
-            <br />
+            <div class="job-tags">
+              <span>Busan</span>
+              <span>Part-Time</span>
+              <span>Entry-Level</span>
+            </div>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
               deserunt hic doloremque, pariatur labore perferendis veritatis
-              voluptates totam beatae consequatur ullam modi porro quis
-              laudantium et nam iusto, quia suscipit.
+              voluptates totam.
             </p>
           </div>
-
           <div class="card-buttons">
             <button class="details-btn">Details</button>
             <button class="apply-now-btn">Apply Now</button>
           </div>
         </div>
       </div>
+      <!-- Pagination -->
       <div class="pagination">
         <a href="#" class="prev">&laquo; Prev</a>
         <a href="#" class="active">1</a>
@@ -228,46 +218,7 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="footer">
-      <div class="footer-container obj-width">
-        <div class="footer-top">
-          <div>
-            <a href="index.html"><h1>JobPortal</h1></a>
-            <p>Find the right opportunity, anytime</p>
-          </div>
-          <div class="footer-icons">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i> </a>
-            <a href="#"><i class="fab fa-linkedin-in"></i> </a>
-            <a href="#"><i class="fab fa-twitter"></i> </a>
-            <a href="#"><i class="fab fa-youtube"></i> </a>
-          </div>
-        </div>
-
-        <div class="footer-middle">
-          <div>
-            <p>For Students</p>
-            <a href="#">Job Listings</a>
-            <a href="#">Saved Jobs</a>
-            <a href="#">Applied Jobs</a>
-          </div>
-          <div>
-            <p>For Employers</p>
-            <a href="#">Post a Job</a>
-            <a href="#">Manage Jobs</a>
-            <a href="#">View Applicants</a>
-          </div>
-          <div>
-            <p>About & Legal</p>
-            <a href="#">About Us</a>
-            <a href="#">Contact</a>
-            <a href="#">Terms & Privacy</a>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <p>© 2025 Job Portal Korea. All rights reserved.</p>
-        </div>
-      </div>
-    </footer>
+   <?php include '../includes/footer.php'; ?>
+    <script src="../js/script.js"></script>
   </body>
 </html>

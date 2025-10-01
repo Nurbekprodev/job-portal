@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -13,18 +13,7 @@
   </head>
   <body>
     <!-- HEADER section -->
-    <header>
-      <div class="container obj-width">
-        <a href="index.html" id="text-logo"><h1>JobPortal</h1></a>
-        <nav id="navbar">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="job_listing.html">Jobs</a></li>
-            <li><a href="#">Login/Register</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    <?php include '../includes/header.php'; ?>
 
     <!-- HERO section -->
     <section class="hero">
@@ -50,7 +39,7 @@
           </form>
         </div>
         <div class="h-right">
-          <img src="images/hero-img.jpg" alt="hero-img" />
+          <img src="../images/hero-img.jpg" alt="hero-img" />
         </div>
       </div>
     </section>
@@ -143,7 +132,7 @@
       </div>
       <div class="testimonials-container obj-width">
         <div class="card-1">
-          <img src="images/human-avatar.jpg" alt="img" />
+          <img src="../images/human-avatar.jpg" alt="img" />
           <h2>Soojin Kim</h2>
           <p class="subheading">Student, Yonsei University</p>
           <p class="stars">⭐⭐⭐⭐⭐</p>
@@ -154,7 +143,7 @@
         </div>
 
         <div class="card-2">
-          <img src="images/human-avatar.jpg" alt="img" />
+          <img src="../images/human-avatar.jpg" alt="img" />
           <h2>Jinwoo Lee</h2>
           <p class="subheading">Student, Korea University</p>
           <p class="stars">⭐⭐⭐⭐⭐</p>
@@ -164,7 +153,7 @@
         </div>
 
         <div class="card-3">
-          <img src="images/human-avatar.jpg" alt="img" />
+          <img src="../images/human-avatar.jpg" alt="img" />
           <h2>Minji Park</h2>
           <p class="subheading">Student, Hanyang University</p>
           <p class="stars">⭐⭐⭐⭐⭐</p>
@@ -190,46 +179,7 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="footer">
-      <div class="footer-container obj-width">
-        <div class="footer-top">
-          <div>
-            <a href="index.html"><h1>JobPortal</h1></a>
-            <p>Find the right opportunity, anytime</p> 
-          </div>
-          <div class="footer-icons">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i> </a>
-            <a href="#"><i class="fab fa-linkedin-in"></i> </a>
-            <a href="#"><i class="fab fa-twitter"></i> </a>
-            <a href="#"><i class="fab fa-youtube"></i> </a>
-          </div>
-        </div>
-
-        <div class="footer-middle">
-          <div>
-            <p>For Students</p>
-            <a href="#">Job Listings</a>
-            <a href="#">Saved Jobs</a>
-            <a href="#">Applied Jobs</a>
-          </div>
-          <div>
-            <p>For Employers</p>
-            <a href="#">Post a Job</a>
-            <a href="#">Manage Jobs</a>
-            <a href="#">View Applicants</a>
-          </div>
-          <div>
-            <p>About & Legal</p>
-            <a href="#">About Us</a>
-            <a href="#">Contact</a>
-            <a href="#">Terms & Privacy</a>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <p>© 2025 Job Portal Korea. All rights reserved.</p>
-        </div>
-      </div>
-    </footer>
+    <?php include '../includes/footer.php'; ?>
+    <script src="../js/script.js"></script>
   </body>
 </html>
