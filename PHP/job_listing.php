@@ -13,7 +13,7 @@
   </head>
   <body>
     <!-- HEADER section -->
-    <?php include '../includes/header.php'; ?>
+  <?php include __DIR__ . '/../includes/header.php'; ?>
 
     <!-- SEARCH BAR section -->
     <section class="search-bar-section">
@@ -218,7 +218,7 @@
     </section>
 
     <!-- FOOTER -->
-   <?php include '../includes/footer.php'; ?>
+  <?php include __DIR__ . '/../includes/footer.php'; ?>
     <script src="../js/script.js"></script>
   </body>
 </html>

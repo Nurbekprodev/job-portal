@@ -13,7 +13,7 @@
   </head>
   <body>
     <!-- HEADER section -->
-    <?php include '../includes/header.php'; ?>
+  <?php include __DIR__ . '/../includes/header.php'; ?>
 
     <!-- JOB DETAILS  -->
     <section class="job-details-section">
@@ -142,7 +142,7 @@
     </section>
 
     <!-- FOOTER -->
-    <?php include '../includes/footer.php'; ?>
+  <?php include __DIR__ . '/../includes/footer.php'; ?>
     <script src="../js/script.js"></script>
   </body>
 </html>

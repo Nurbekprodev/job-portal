@@ -1,0 +1,10 @@
+[
+    {
+        "id": "9a3265715d5aa44e",
+        "name": "nurbek",
+        "email": "nurbekprodev@gmail.com",
+        "password": "$2y$10$G836dKRRpJgGDFlizpnxvOVPmUPgbfyGDxBswxU5CnNdQlxwst8BC",
+        "role": "employee",
+        "created_at": "2025-10-14T14:21:35+02:00"
+    }
+]
