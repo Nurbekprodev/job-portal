@@ -1320,3 +1320,66 @@ button:hover i {
     display: none; /* hide Prev/Next on very small screens */
   }
 }
+
+/* ===========================
+   CONTACT FORM POLISH
+   Appended to ensure form inputs, buttons and errors are styled
+=========================== */
+.student-form {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 30px rgba(2,6,23,0.06);
+}
+
+.student-form form {
+  display: grid;
+  grid-template-areas:
+    "name subject"
+    "email phone-number"
+    "message message"
+    "submit submit";
+  gap: 1rem;
+}
+
+.student-form input[type="text"],
+.student-form input[type="email"],
+.student-form input[type="tel"],
+.student-form textarea {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.student-form textarea { min-height: 140px; resize: vertical; }
+
+#name { grid-area: name; }
+#subject { grid-area: subject; }
+#email { grid-area: email; }
+#phone-number { grid-area: phone-number; }
+#message { grid-area: message; }
+#submit { grid-area: submit; justify-self: start; padding: 0.8rem 1.2rem; background: var(--btn-bg); color: var(--btn-text); border: none; border-radius: 8px; cursor: pointer; }
+
+/* Errors and success */
+.form-errors { margin-top: 1rem; }
+.form-errors ul { list-style: none; margin: 0; padding: 0.7rem 1rem; border-radius: 8px; background: #fff7f7; border: 1px solid #ffd0d0; color: #7a1616; }
+.form-errors ul li { padding-left: 1.2rem; margin: 0.4rem 0; position: relative; }
+.form-errors ul li::before { content: "•"; color: #c0392b; position: absolute; left: 0; top: 0; transform: translateY(0.05rem); }
+.form-success { margin-top: 1rem; padding: 0.7rem 1rem; border-radius: 8px; background: #eefbee; border: 1px solid #c7efcf; color: #175c2e; }
+
+@media (max-width: 900px) {
+  .student-form form { grid-template-areas: "name" "subject" "email" "phone-number" "message" "submit"; }
+  #submit { justify-self: stretch; }
+}
+
+/* small header login badge + role switcher */
+.user-badge { margin-right: 0.6rem; font-weight: 600; color: var(--muted); }
+.role-switcher { display: inline-block; margin-left: 0.6rem; }
+.role-switcher select { padding: 0.3rem; border-radius: 4px; }
+
+/* simple form spacing for login/register */
+main.obj-width { max-width: 760px; margin: 2rem auto; }
+main.obj-width form label { display: block; margin: 0.6rem 0; }
+main.obj-width button { padding: 0.6rem 1rem; border-radius: 6px; background: var(--btn-bg); color: var(--btn-text); border: none; cursor: pointer; }
